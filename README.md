@@ -85,24 +85,47 @@ to keep my meagre assets safe
   - steer engine control
   
   ## object-detection framework selection
-  | Name | OS support? | ARM support? |  Model ready?  |Model Size(MB) |Compressed or Quantizated ? | RAM / Frame | FPS | Doc | Tutorial off-the-shelf? |
-  |----  |----         |----          |----            |----           |----                     |----       |---- |---- |----                |
-  |TFLite| Pi          | arm vx       |yolov3-tiny, ssd| 2MB           | Yes                     | nil       | 11  | Good| No                 |
-  
- Refs:
- home monitor https://www.cnblogs.com/chuxiuhong/p/6196268.html
- home monitor https://shumeipai.nxez.com/2019/04/17/raspberry-pi-zero-w-cctv-camera-with-motioneyeos.html
- yolov3 https://zhuanlan.zhihu.com/p/133929606
- huawei bolt https://github.com/huawei-noah/bolt/blob/master/docs/BENCHMARK.md
- tnn https://blog.csdn.net/ljyljyok/article/details/107133300
+   | Name | Company| support Pi? | ARM optimized? |  Model ready?  |Model Size(MB) |Compressed or Quantizated ? | RAM / Frame | FPS | Doc | Tutorial off-the-shelf? |
+  |----   |----    |----         |----            |----            |----           |----                        |----         |---- |---- |----                     |
+  |TFLite |Google  | Linux       | yes            |COCO SSD MobileNet v1| 3.98 MB  | quant                      | pass        | pass| Python Pi, Android| No        |
+  |Core ML|Apple   | Apple eco only| pass         |pass                 | pass     | pass                       |pass         |pass |pass               | pass      |
+  |Mace   | Xiaomi | yes         | yes            | SSD mobilenet v1, yolo-v3      |seem big      |seem not     |pass         |pass |android demo only  | seem not  |
+  |Darknet|personal| yes         | openmp naive   |  yolo-v3-tiny     | 33.7 MB    | compressed                 |pass         |220fps @CoCO@Titan X|general    | no |
+  |MNN    | Alibaba| yes         | yes            | support tf, tflite, caffe, onnx|  pass   |  pass            |pass         |pass |Good doc| no                   |
+  |caffe2 |Facebook|  seems not  | pass           |pass            | pass          | pass                       |pass         |pass |pass    | pass                 |
+  |TNN    |Tencent | embedded linux| yes          | support tf, pytorch, mxnet, caffe| pass           | has tool|pass |Mobilenet v1 88ms,  55ms (int8) @ Kirin 970| general unkonwn   |
+  |Paddle-Mobile|Baidu| linux    | yes            | support paddle, tf, caffe| unknow  | has tool               | pass |Mobilenetv1	97.8ms, 65.95 (int8) @ Kirin 970| general | unknown |
+  |bolt  | huawei| ubuntu        | yes            | ssd, support  caffe, onnx, tflite| seem not   |pass         | pass |Mobilenet v1 168ms @ Kirin 810 | general |seem not|
+
+Refs:
+MNN vs TNN vs NCNN: https://www.sohu.com/a/405509810_100191018
+
+home monitor: https://www.cnblogs.com/chuxiuhong/p/6196268.html
+
+home monitor: https://shumeipai.nxez.com/2019/04/17/raspberry-pi-zero-w-cctv-camera-with-motioneyeos.html
+
+yolov3: https://zhuanlan.zhihu.com/p/133929606
+
+huawei bolt: https://github.com/huawei-noah/bolt/blob/master/docs/BENCHMARK.md
+
+Tnn: https://blog.csdn.net/ljyljyok/article/details/107133300
+
 https://github.com/Tencent/TNN
-paddle lite https://github.com/PaddlePaddle/Paddle-Lite
-survey https://www.jianshu.com/p/ff1534dffbd1
-alibaba MNN https://github.com/alibaba/MNN/blob/master/README_CN.md
-darknet https://pjreddie.com/darknet/yolo/
-xiaomi https://github.com/XiaoMi/mace-models
-Apple https://developer.apple.com/documentation/coreml
-Tf lite https://tensorflow.google.cn/lite/models?hl=zh-cn
+
+Paddle lite: https://github.com/PaddlePaddle/Paddle-Lite
+
+survey: https://www.jianshu.com/p/ff1534dffbd1
+
+alibaba MNN: https://github.com/alibaba/MNN/blob/master/README_CN.md
+
+darknet: https://pjreddie.com/darknet/yolo/
+
+xiaomi: https://github.com/XiaoMi/mace-models
+
+Apple: https://developer.apple.com/documentation/coreml
+
+Tf lite: https://tensorflow.google.cn/lite/models?hl=zh-cn
+ 
  ## system design
  - loop, recv command, take action on per frame
  - well modulized

@@ -7,3 +7,5 @@ These things stop me investing more, I dont want to pay too much time on it.
 I will tolerate tflite with 800ms per frame. Maybe some day I will re-install a 64bit os to refresh 800ms to 400ms.
 
 Wow! Embracing Paddle with arm-linux demo and pretrained model!
+https://github.com/PaddlePaddle/Paddle-Lite-Demo
+https://paddle-lite.readthedocs.io/zh/latest/user_guides/model_optimize_tool.html

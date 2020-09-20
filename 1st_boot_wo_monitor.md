@@ -1,7 +1,6 @@
 # Without a monitor and a keyboard, how to boot up rasberry pi?
 
 # hardware requirements
-Need:
   - Rasberry pi 3B board
   - Powwer supplier
   - TF card
@@ -47,15 +46,15 @@ Need:
     - power on
   
 ## 4. login to pi
-    - require:
-      - mobaXterm
-      - Advanced_IP_Scanner_2
+  - require:
+    - mobaXterm
+    - Advanced_IP_Scanner_2
    - how
       - Advanced_IP_Scanner to get local ip for Raserry pi
       - ssh pi@the-ip-you-get 
       - password : reaberripi
 ## 5. config
-    - raspi-config
+  - raspi-config
     - choose 1 change your user name and pwd
     - choose Interfacing Options->VNC to enbale remote Desktop; then you can use VNC viewer to connect it remotely
     - choose Network Options-> set up Wifi, then you can get rid of caple

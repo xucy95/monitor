@@ -5,3 +5,5 @@ Converting need cuda installed, run TNN on Rasberry pi need a higher version GCC
 These things stop me investing more, I dont want to pay too much time on it.
  
 I will tolerate tflite with 800ms per frame. Maybe some day I will re-install a 64bit os to refresh 800ms to 400ms.
+
+Wow! Embracing Paddle with arm-linux demo and pretrained model!

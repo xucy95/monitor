@@ -1,0 +1,9 @@
+[submodule "yaml-cpp"]
+	path = build/third_party/yaml-cpp/src/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp.git
+[submodule "vmime"]
+	path = build/third_party/vmime/src/vmime
+	url = https://github.com/kisli/vmime.git
+[submodule "eMail"]
+	path = build/third_party/eMail/src/eMail
+	url = https://github.com/deanproxy/eMail.git

@@ -2,7 +2,7 @@
 # cmake settings
 #################################
 cmake_minimum_required(VERSION 3.10)
-set(CMAKE_BUILD_TYPE "Debug")   # or "Release"
+set(CMAKE_BUILD_TYPE "Release")   # "Debug" or "Release"
 set(CMAKE_VERBOSE_MAKEFILE OFF) # or ON
 
 #################################
@@ -49,9 +49,9 @@ endif(NOT CMAKE_CXX_STANDARD)
 # source directory
 set(SRC_ROOT_DIR  	${CMAKE_CURRENT_LIST_DIR})
 set(WATCH_DOG_DIR 	${SRC_ROOT_DIR}/watchdog)
-set(THIRD_PARTY_DIR "${PROJECT_SOURCE_DIR}/third_party"
+set(THIRD_PARTY_DIR "${SRC_ROOT_DIR}/build/third_party"
   CACHE PATH "Where the third party headers and libs are put")
-set(THIRD_PARTY_SUBMODULE_DIR "${PROJECT_SOURCE_DIR}/build/third_party"
+set(THIRD_PARTY_SUBMODULE_DIR "${SRC_ROOT_DIR}/build/third_party"
   CACHE PATH "Where the third party submodules are")
 
 # CMake module directory
@@ -102,5 +102,5 @@ endif()
 ###############################
 #
 ###############################
-#include(third_party)
-#include(watchdog)
+include(third_party)
+include(watchdog)

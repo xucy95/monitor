@@ -1,9 +1,12 @@
-[submodule "yaml-cpp"]
-	path = build/third_party/yaml-cpp/src/yaml-cpp
-	url = https://github.com/jbeder/yaml-cpp.git
-[submodule "vmime"]
+[submodule "build/third_party/paddile_lite_demo/src/Paddle-Lite-Demo"]
+	path = build/third_party/paddile_lite_demo/src/Paddle-Lite-Demo
+	url = https://github.com/PaddlePaddle/Paddle-Lite-Demo.git
+[submodule "build/third_party/vmime/src/vmime"]
 	path = build/third_party/vmime/src/vmime
 	url = https://github.com/kisli/vmime.git
-[submodule "eMail"]
+[submodule "build/third_party/eMail/src/eMail"]
 	path = build/third_party/eMail/src/eMail
 	url = https://github.com/deanproxy/eMail.git
+[submodule "build/third_party/yaml-cpp/src/yaml-cpp"]
+	path = build/third_party/yaml-cpp/src/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp.git

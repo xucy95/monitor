@@ -1,4 +1,4 @@
-build/
-build/build-*
-third_party
+./build/build/*/
+./build/build/
+./cmake/.cmake*
 .vscode

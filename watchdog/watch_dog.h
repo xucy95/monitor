@@ -8,6 +8,5 @@ class WatchDog{
 public:
     WatchDog();
 private:
-    ObjectDetector obj_detector;
     Motor motor;
 };
